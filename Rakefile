@@ -112,6 +112,15 @@ namespace :db do
     require APP_ROOT.join('db', 'seeds.rb')
   end
 
+  desc "Runs db:drop, db:create, db:migrate, db:seed"
+  task :reset do
+    puts "db:reset => running db:drop, db:create, db:migrate, db:seed"
+    Rake::Task["db:drop"].invoke
+    Rake::Task["db:create"].invoke
+    Rake::Task["db:migrate"].invoke
+    Rake::Task["db:seed"].invoke
+  end
+
   desc "Returns the current schema version number"
   task :version do
     puts "Current version: #{ActiveRecord::Migrator.current_version}"

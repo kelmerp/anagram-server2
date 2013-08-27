@@ -1,3 +1,4 @@
 IO.foreach('./db/words') do |word|
-  Word.create(:body => word, :size => word.size)
+  word = word.strip
+  Word.create(:body => word)
 end
