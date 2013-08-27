@@ -15,7 +15,7 @@ class Word < ActiveRecord::Base
     # puts "word is #{word}"
     primary_hash = Word.string_to_hash(word)
     results_array = []
-    words = Word.get_word_of_size(word.size + 1)
+    words = Word.get_word_of_size(word.size)
     words.each do |e| 
     # puts Word.string_to_hash(e.body)  
     results_array << e.body if Word.string_to_hash(e.body) == primary_hash

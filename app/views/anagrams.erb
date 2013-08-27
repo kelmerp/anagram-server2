@@ -1,5 +1,7 @@
-<p> Show a list of anagrams for "<%= @word %>" </p>
-
-<% @anagrams.each do |e| %>
-<p><%= e %></p> 
-<% end %>
+<div class="results">
+  <h3> Show a list of anagrams for "<%= @word %>" </h3>
+  <h4> Number fo words found: <%= @anagrams.size %></h4>
+  <% @anagrams.each do |e| %><br>
+  <span class="word"><%= e %></span> 
+  <% end %>
+</div> <!-- /results -->

@@ -3,7 +3,33 @@
   width: 600px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
+  background-color: #336666;
 }
+
+.results {
+  width: 50%;
+  margin: 20px auto;
+  background-color: #9999FF;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.results span {
+  color: #660033;
+}
+
 th {
   text-align: left;
+}
+
+body {
+  background-color: #CCCCCC;
+}
+
+h3 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
 }
